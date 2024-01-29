@@ -18,7 +18,7 @@ const Navbar = () => {
         onMouseLeave={handleDown}
         style={{ marginTop: -3 }}
       >
-        <a href="my account" style={{ paddingBottom: 10 }}>
+        <a href="my account" style={{ paddingBottom: 10 }} className="account">
           My account <FaCaretDown />
         </a>
         {isDroppedDown && (
