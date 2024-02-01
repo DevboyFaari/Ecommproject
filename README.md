@@ -1,3 +1,5 @@
+Creating this E-commerce store for shoes with React, Typescript, Swiper.js, and Redux, the designs were inspired by this link "https://websitedemos.net/shoe-store-04/#".
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
