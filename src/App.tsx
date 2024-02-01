@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import BodyImg from "./BodyImg";
 import Sneakerdata from "./Sneakerdata";
 import Body from "./Body";
+
 // import Tuspi from "./tuspi";
 
 function App() {

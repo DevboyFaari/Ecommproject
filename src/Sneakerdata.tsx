@@ -6,9 +6,10 @@ import { Navigation, Pagination, A11y } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
+import { FaRegStar } from "react-icons/fa6";
 
 // Define types for the sneaker data
-interface Sneaker {
+export interface Sneaker {
   id: number;
   shoeName: string;
   brand: string;
@@ -59,7 +60,7 @@ const Sneakerdata: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="cover">
       <div className="sneaker-info">
         <Swiper
           modules={[Navigation, Pagination, A11y]}
@@ -77,7 +78,14 @@ const Sneakerdata: React.FC = () => {
                   <img src={sneaker.thumbnail} alt={sneaker.shoeName} />
                   <p style={{ fontWeight: 700 }}>{sneaker.brand}</p>
                   <p>{sneaker.shoeName}</p>
-                  <p>${sneaker.retailPrice}</p>
+                  <p style={{ color: "#3a3a3a" }}>
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                    <FaRegStar />
+                  </p>
+                  <p style={{ color: "green" }}>${sneaker.retailPrice}</p>
                 </div>
               </div>
             </SwiperSlide>

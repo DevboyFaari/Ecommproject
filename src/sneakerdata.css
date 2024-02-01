@@ -9,6 +9,12 @@
     overflow-x: hidden;
     padding: 0;
   }
+
+  .cover{
+    width: 1349px;
+    background-color: #4b4f580f;
+
+  }
   
   .take{
     margin-bottom: 50px;
