@@ -12,22 +12,6 @@ const Body = () => {
   const [sneakers, setSneakers] = useState<Sneaker[]>([]);
   const [booting, setBooting] = useState(true);
 
-  const progressCircle = useRef<HTMLDivElement | null>(null);
-  const progressContent = useRef<HTMLDivElement | null>(null);
-
-  const onAutoplayTimeLeft = (s: any, time: number, progress: number) => {
-    if (progressCircle.current) {
-      progressCircle.current.style.setProperty(
-        "--progress",
-        String(1 - progress)
-      );
-    }
-
-    if (progressContent.current) {
-      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-    }
-  };
-
   const getData = async () => {
     try {
       const response = await fetch(
@@ -62,6 +46,22 @@ const Body = () => {
     getData();
   }, []);
 
+  const progressCircle = useRef<HTMLDivElement | null>(null);
+  const progressContent = useRef<HTMLDivElement | null>(null);
+
+  const onAutoplayTimeLeft = (s: any, time: number, progress: number) => {
+    if (progressCircle.current) {
+      progressCircle.current.style.setProperty(
+        "--progress",
+        String(1 - progress)
+      );
+    }
+
+    if (progressContent.current) {
+      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    }
+  };
+
   // Use return statement to render JSX
   return (
     <div className="container-boot-info">
@@ -76,7 +76,7 @@ const Body = () => {
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
         >
           {sneakers.map((sneaker) => (
             <SwiperSlide className="take" key={sneaker.id}>
@@ -132,8 +132,9 @@ const Body = () => {
         <h1>04.</h1>
         <h2>Sales & Support</h2>
         <p>
-          Lorem ipsum dolor sit amet, consec tetur elit. Ut elit tellus, luctus
-          nec ullam corper.
+          Our dedicated Sales and Support team is committed to ensuring that
+          every step of your journey with our products is met with satisfaction
+          and support.
         </p>
       </div>
     </div>
