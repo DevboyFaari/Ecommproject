@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 const BodyImg = () => {
   return (
     <div className="main">
-      <img src="./bigshoes.png" alt="color" className="body-img" />
+      <img src="./bigshoes.png" alt="color" className="body-img grow-image" />
       <div className="shoes">
         <h1>AIRPRO X3</h1>
         <h1>AIRPRO X3</h1>

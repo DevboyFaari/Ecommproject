@@ -20,6 +20,14 @@
    white-space: nowrap;
   }
   
+  .grow-image {
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .grow-image:hover {
+    transform: scale(1.2); 
+  }
+  
 
   .body-img{
         margin-top: 900px;
